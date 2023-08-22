@@ -39,10 +39,34 @@ void imprimir(nodo *q)
     cout << "#";
 }
 
-bool esSubLista(Lista &L, Lista &P, int x)
-{
-    
+bool esSubLista (Lista L1, Lista L2) {
+    if (L2 == NULL)
+        return true;
+    if (L1 == NULL)
+        return false;
+    if (L1->info != L2->info)
+        return esSubLista(L1->sig, L2);
+    else 
+        return esSubLista(L1->sig, L2->sig) || esSubLista(L1->sig, L2);
 }
+
+bool esSubLista_iterativo (Lista L1, Lista L2) {
+    Lista aux1 = L1;
+    Lista aux2 = L2;
+    while (L2 != NULL && L1 != NULL) {
+        if (L1->info == L2->info) {
+            L1 = L1->sig;
+            L2 = L2->sig;
+        }
+        else {
+            aux1 = L1 = aux1->sig;
+            if (L2 != aux2)
+                L2 = aux2;
+        }
+    }
+    return (L2 == NULL);
+}
+
 
 int main()
 {

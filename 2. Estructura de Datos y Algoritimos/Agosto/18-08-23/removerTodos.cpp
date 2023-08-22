@@ -36,11 +36,37 @@ void imprimir(nodo *q)
     }
     cout << "#";
 }
-
-void removerTodos(Lista &L){
-
+void removerTodos (Lista & L, int x) {
+    Lista borrar;
+    while (L != NULL && L->info == x) {
+        borrar = L;
+        L = L->sig;
+        delete borrar;
+    }
+    Lista aux = L;
+    while (aux != NULL && aux->sig != NULL) {
+        if (aux->sig->info == x) {
+            borrar = aux->sig;
+            aux->sig = borrar->sig;
+            delete borrar;
+        }
+        else 
+            aux = aux->sig;
+    }
 }
 
+void removerTodos_recursivo (Lista & L, int x) {
+    if (L != NULL) {
+        if (L->info == x) {
+            Lista borrar = L;
+            L = L->sig;
+            delete borrar;
+            removerTodos_recursivo(L,x);
+        }
+        else 
+            removerTodos_recursivo(L->sig, x);
+    }
+}
 
 int main()
 {
