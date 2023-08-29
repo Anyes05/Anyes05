@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*IV. insFinal: dados un entero x y una lista l, inserta x al final de l*/
+/*III. resto: dada una lista l no vacía, retorna la lista sin su primer elemento.*/
 
 struct nodo
 {
@@ -11,7 +11,7 @@ struct nodo
 
 typedef nodo *Lista;
 
-nodo *crearN(int n)
+nodo *crearLista(int n)
 {
     nodo *res = new nodo;
     nodo *aux = res; // los dos punterso apuntan al mismo lado
@@ -37,26 +37,23 @@ void imprimir(nodo *q)
     cout << "#";
 }
 
-void insFinal(Lista &L, int x)
+Lista insOrden(Lista &L,int n)
 {
-    Lista nuevo = new nodo;
-    nuevo->info = x;
-    nuevo->sig = NULL;
-    if (L == NULL)
-        L = nuevo;
-    else
-    {
-        Lista aux = L;
-        while (L->sig != NULL)
-            L = L->sig;
-        L->sig = aux;
-        aux->info = x;
-        aux->sig=NULL;
-    }
+
+    return L;
 }
 
 int main()
 {
+    int n = 10;
+
+    Lista L = crearLista(n);
+
+    imprimir(L);
+    cout << endl;
+
+    L = insOrden(L,3);
+    imprimir(L);
 
     return 0;
 }

@@ -23,7 +23,7 @@ nodo *crearN(int n)
     {
         aux->sig = new nodo;
         aux = aux->sig;
-        aux->info = n--;
+        aux->info = n;
     }
     aux->sig = NULL;
     return res;

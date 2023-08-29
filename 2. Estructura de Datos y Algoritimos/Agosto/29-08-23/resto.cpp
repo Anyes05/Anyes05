@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*V. removerTodos: dados un entero x y una lista l, remueve a x de l.*/
+/*III. resto: dada una lista l no vacía, retorna la lista sin su primer elemento.*/
 
 struct nodo
 {
@@ -11,7 +11,7 @@ struct nodo
 
 typedef nodo *Lista;
 
-nodo *crearN(int n)
+nodo *crearLista(int n)
 {
     nodo *res = new nodo;
     nodo *aux = res; // los dos punterso apuntan al mismo lado
@@ -36,40 +36,46 @@ void imprimir(nodo *q)
     }
     cout << "#";
 }
-void removerTodos (Lista & L, int x) {
-    Lista borrar;
-    while (L != NULL && L->info == x) {
-        borrar = L;
-        L = L->sig;
-        delete borrar;
-    }
-    Lista aux = L;
-    while (aux != NULL && aux->sig != NULL) {
-        if (aux->sig->info == x) {
-            borrar = aux->sig;
-            aux->sig = borrar->sig;
-            delete borrar;
-        }
-        else 
-            aux = aux->sig;
-    }
-}
 
-void removerTodos_recursivo (Lista & L, int x) {
-    if (L != NULL) {
-        if (L->info == x) {
+Lista resto(Lista &L)
+{
+
+    Lista aux;
+    Lista borrar;
+    while (L != NULL)
+    {
+        if (L->sig == L)
+        {
+            delete L;
+            L = NULL;
+        }
+        else
+        {
+            Lista aux = L->sig;
+            while (aux->sig != L)
+            {
+                aux = aux->sig;
+            }
             Lista borrar = L;
+            aux->sig = borrar->sig;
             L = L->sig;
             delete borrar;
-            removerTodos_recursivo(L,x);
         }
-        else 
-            removerTodos_recursivo(L->sig, x);
     }
+    return L;
 }
 
 int main()
 {
+    int n = 10;
+
+    Lista L = crearLista(n);
+
+    imprimir(L);
+    cout << endl;
+
+    L = resto(L);
+    imprimir(L);
     
     return 0;
 }

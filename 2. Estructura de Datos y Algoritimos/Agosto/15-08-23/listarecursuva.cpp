@@ -19,7 +19,7 @@ nodo *crearN(int n)
     {
        aux -> sig = new nodo;
        aux = aux -> sig;
-       aux -> dato = n--; 
+       aux -> dato = n; 
     }
     aux->sig = NULL;
     return res;
