@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <math.h>
 using namespace std;
 
 // II. función contarElems: que recibe un árbol y retorna la cantidad de elementos del mismo.
