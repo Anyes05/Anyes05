@@ -1,18 +1,31 @@
-Hi, I'm Ana 👋
+# Hi, I'm Ana 👋
 
-🎓 Advanced student in Computer Science at UTEC
-💻 Interested in backend development, Linux and web technologies
-🌱 Currently learning more about software architecture and cloud technologies
+💻 Software Developer Student at UTEC
+🌐 Interested in Backend Development, Linux and Web Technologies
+🚀 Currently working with PHP, JavaScript, PostgreSQL and Git
 
-Technologies
-PHP
-JavaScript
-MySQL / PostgreSQL
-Linux
-Git & GitHub
-Featured Projects
-✈️ volando-uy → Flight management web platform
-🏠 Real estate management system
-🐧 Linux file administration scripts
-Contact
-LinkedIn: www.linkedin.com/in/anareyesmacedo
+## Technologies
+
+* PHP
+* JavaScript
+* HTML & CSS
+* PostgreSQL / MySQL
+* Linux
+* Git & GitHub
+
+## Featured Projects
+
+* ✈️ volando-uy → Flight management web platform
+* 🏠 Real estate management system
+* 🐧 Linux administration scripts
+
+## Currently Learning
+
+* Docker
+* AWS
+* Software Architecture
+* Cybersecurity
+
+## Contact
+
+* LinkedIn: [www.linkedin.com/in/anareyesmacedo](http://www.linkedin.com/in/anareyesmacedo)
