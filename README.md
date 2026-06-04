@@ -1,6 +1,6 @@
 # Hi, I'm Ana 👋
 
-💻 Software Developer Student at UTEC
+💻 Technologist Degree in Computer Science at UTEC
 🌐 Interested in Backend Development, Linux and Web Technologies
 🚀 Currently working with PHP, JavaScript, PostgreSQL and Git
 
